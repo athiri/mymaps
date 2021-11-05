@@ -70,7 +70,7 @@ class CreateMapActivity : AppCompatActivity(), OnMapReadyCallback {
             }
             val places = markers.map { marker -> Place(marker.title.toString(),
                 marker.snippet.toString(), marker.position.latitude, marker.position.longitude) }
-            val userMap = UserMap(intent.getStringExtra(EXTRA_MAP_TITLE).toString(), places)
+            val userMap = UserMap(intent.getStringExtra(EXTRA_MAP_TITLE).toString().capitalize(), places)
             val data = Intent()
             data.putExtra(EXTRA_USER_MAP, userMap)
             setResult(Activity.RESULT_OK, data)

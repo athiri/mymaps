@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
                 .setPositiveButton("OK",null)
                 .show()
         dialog.getButton(DialogInterface.BUTTON_POSITIVE).setOnClickListener{
-            val title = mapFormView.findViewById<EditText>(R.id.etTitle2).text.toString()
+            val title = mapFormView.findViewById<EditText>(R.id.etTitle2).text.toString().capitalize()
             if (title.trim().isEmpty()) {
                 Toast.makeText(this, "Map must have a non-empty title", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
